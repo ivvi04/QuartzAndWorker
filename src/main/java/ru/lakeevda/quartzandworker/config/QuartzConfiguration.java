@@ -4,6 +4,7 @@ import org.quartz.CronTrigger;
 import org.quartz.Job;
 import org.quartz.JobDetail;
 import org.quartz.Trigger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -22,11 +23,9 @@ import java.util.Date;
 public class QuartzConfiguration implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
-    private final DataSource dataSource;
 
-    public QuartzConfiguration(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
+    @Autowired
+    private DataSource dataSource;
 
     @Bean
     public SpringBeanJobFactory springBeanJobFactory() {
