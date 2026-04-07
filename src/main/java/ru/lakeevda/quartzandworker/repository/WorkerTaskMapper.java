@@ -8,8 +8,5 @@ import ru.lakeevda.quartzandworker.entity.WorkerTaskEntity;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface WorkerTaskMapper {
-
     WorkerTaskParams toParams(WorkerTaskEntity entity);
-    WorkerTaskEntity toEntity(WorkerTaskParams entity);
-
 }

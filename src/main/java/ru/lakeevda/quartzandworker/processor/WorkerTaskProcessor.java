@@ -27,12 +27,12 @@ public class WorkerTaskProcessor {
         return repository.getRandom();
     }
 
-    public WorkerTaskParams created(WorkerTaskParams params) {
+    public void created(WorkerTaskParams params) {
         WorkerTaskParams inProgress = new WorkerTaskParams(params.getId(),
                 WorkerTaskStatus.CREATED.toString(),
                 params.getVersion() + 1,
                 params.getCountOfIterations());
-        return repository.create(inProgress);
+        repository.create(inProgress);
     }
 
     public WorkerTaskParams inProgress(WorkerTaskParams params) {
@@ -43,20 +43,20 @@ public class WorkerTaskProcessor {
         return repository.update(inProgress);
     }
 
-    public WorkerTaskParams completed(WorkerTaskParams params) {
+    public void completed(WorkerTaskParams params) {
         WorkerTaskParams completed = new WorkerTaskParams(params.getId(),
                 WorkerTaskStatus.COMPLETED.toString(),
                 params.getVersion(),
                 params.getCountOfIterations());
-        return repository.update(completed);
+        repository.update(completed);
     }
 
-    public WorkerTaskParams fail(WorkerTaskParams params) {
+    public void fail(WorkerTaskParams params) {
         WorkerTaskParams fail = new WorkerTaskParams(params.getId(),
                 WorkerTaskStatus.FAILED.toString(),
                 params.getVersion(),
                 params.getCountOfIterations());
-        return repository.update(fail);
+        repository.update(fail);
     }
 
 }

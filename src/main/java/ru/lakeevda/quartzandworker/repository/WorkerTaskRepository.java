@@ -2,7 +2,6 @@ package ru.lakeevda.quartzandworker.repository;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.lakeevda.quartzandworker.boundary.workertask.WorkerTaskParams;
 import ru.lakeevda.quartzandworker.entity.WorkerTaskEntity;
@@ -20,13 +19,14 @@ public class WorkerTaskRepository {
 
     private static final int LIMIT = 5;
     private final Set<String> STATUSES_IGNORED = Set.of(WorkerTaskStatus.IN_PROGRESS.toString(), WorkerTaskStatus.COMPLETED.toString());
-    private static final long VERSION = 0L;
-    private static final long COUNT_OF_ITERATIONS = 0L;
 
-    @Autowired
-    private WorkerTaskJpaRepository repository;
-    @Autowired
-    private WorkerTaskMapper mapper;
+    private final WorkerTaskJpaRepository repository;
+    private final WorkerTaskMapper mapper;
+
+    public WorkerTaskRepository(WorkerTaskJpaRepository repository, WorkerTaskMapper mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
+    }
 
     public List<WorkerTaskParams> getAll() {
         List<WorkerTaskEntity> entities = repository.findAllByStatusNotInAndLimit(STATUSES_IGNORED, LIMIT);
@@ -43,13 +43,9 @@ public class WorkerTaskRepository {
             throw new IllegalArgumentException("params is null");
         }
 
-        Optional<WorkerTaskEntity> entityOptional = params.getId() == null ? Optional.empty(): repository.findById(params.getId());
+        Optional<WorkerTaskEntity> entityOptional = params.getId() == null ? Optional.empty() : repository.findById(params.getId());
         WorkerTaskEntity entity;
-        if (entityOptional.isPresent()) {
-            entity = entityOptional.get();
-        } else {
-            entity = new WorkerTaskEntity();
-        }
+        entity = entityOptional.orElseGet(WorkerTaskEntity::new);
 
         entity.setVersion(params.getVersion());
         entity.setStatus(params.getStatus());
