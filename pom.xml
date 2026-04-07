@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.lakeevda</groupId>
-    <artifactId>QuartzTest</artifactId>
+    <artifactId>QuartzAndWorker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>QuartzTest</name>
-    <description>QuartzTest</description>
+    <name>QuartzAndWorker</name>
+    <description>QuartzAndWorker</description>
     <url/>
     <licenses>
         <license/>

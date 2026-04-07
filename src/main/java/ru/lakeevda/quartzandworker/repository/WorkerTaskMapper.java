@@ -1,9 +1,9 @@
-package ru.lakeevda.quartztest.repository;
+package ru.lakeevda.quartzandworker.repository;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
-import ru.lakeevda.quartztest.boundary.workertask.WorkerTaskParams;
-import ru.lakeevda.quartztest.entity.WorkerTaskEntity;
+import ru.lakeevda.quartzandworker.boundary.workertask.WorkerTaskParams;
+import ru.lakeevda.quartzandworker.entity.WorkerTaskEntity;
 
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)

@@ -1,12 +1,12 @@
-package ru.lakeevda.quartztest.repository;
+package ru.lakeevda.quartzandworker.repository;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ru.lakeevda.quartztest.boundary.workertask.WorkerTaskParams;
-import ru.lakeevda.quartztest.entity.WorkerTaskEntity;
-import ru.lakeevda.quartztest.entity.WorkerTaskStatus;
+import ru.lakeevda.quartzandworker.boundary.workertask.WorkerTaskParams;
+import ru.lakeevda.quartzandworker.entity.WorkerTaskEntity;
+import ru.lakeevda.quartzandworker.entity.WorkerTaskStatus;
 
 import java.util.Collections;
 import java.util.List;

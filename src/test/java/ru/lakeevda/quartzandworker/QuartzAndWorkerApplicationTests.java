@@ -1,10 +1,10 @@
-package ru.lakeevda.quartztest;
+package ru.lakeevda.quartzandworker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QuartzTestApplicationTests {
+class QuartzAndWorkerApplicationTests {
 
     @Test
     void contextLoads() {

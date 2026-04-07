@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.entity;
+package ru.lakeevda.quartzandworker.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.job;
+package ru.lakeevda.quartzandworker.job;
 
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.Job;
@@ -6,9 +6,9 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.lakeevda.quartztest.boundary.workertask.WorkerTaskParams;
-import ru.lakeevda.quartztest.entity.WorkerTaskStatus;
-import ru.lakeevda.quartztest.processor.WorkerTaskProcessor;
+import ru.lakeevda.quartzandworker.boundary.workertask.WorkerTaskParams;
+import ru.lakeevda.quartzandworker.entity.WorkerTaskStatus;
+import ru.lakeevda.quartzandworker.processor.WorkerTaskProcessor;
 
 @Slf4j
 @Component

@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.boundary.workertask;
+package ru.lakeevda.quartzandworker.boundary.workertask;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

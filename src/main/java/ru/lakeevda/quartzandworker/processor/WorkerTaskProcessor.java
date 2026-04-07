@@ -1,11 +1,11 @@
-package ru.lakeevda.quartztest.processor;
+package ru.lakeevda.quartzandworker.processor;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.lakeevda.quartztest.boundary.workertask.WorkerTaskParams;
-import ru.lakeevda.quartztest.entity.WorkerTaskStatus;
-import ru.lakeevda.quartztest.repository.WorkerTaskRepository;
+import ru.lakeevda.quartzandworker.boundary.workertask.WorkerTaskParams;
+import ru.lakeevda.quartzandworker.entity.WorkerTaskStatus;
+import ru.lakeevda.quartzandworker.repository.WorkerTaskRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;

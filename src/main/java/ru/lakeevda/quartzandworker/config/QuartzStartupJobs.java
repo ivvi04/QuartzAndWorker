@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.config;
+package ru.lakeevda.quartzandworker.config;
 
 import org.quartz.JobDetail;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 import org.springframework.scheduling.quartz.JobDetailFactoryBean;
-import ru.lakeevda.quartztest.job.CreateTaskJob;
-import ru.lakeevda.quartztest.job.WorkerTaskJob;
+import ru.lakeevda.quartzandworker.job.CreateTaskJob;
+import ru.lakeevda.quartzandworker.job.WorkerTaskJob;
 
 @Configuration
 public class QuartzStartupJobs {

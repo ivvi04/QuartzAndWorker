@@ -20,6 +20,7 @@ target/
 *.ipr
 /.idea
 /.fastRequest
+amplicode.xml
 
 ### NetBeans ###
 /nbproject/private/

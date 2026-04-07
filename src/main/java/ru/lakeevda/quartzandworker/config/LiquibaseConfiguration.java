@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.config;
+package ru.lakeevda.quartzandworker.config;
 
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Autowired;

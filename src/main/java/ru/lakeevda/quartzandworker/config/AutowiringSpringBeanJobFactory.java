@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.config;
+package ru.lakeevda.quartzandworker.config;
 
 import org.quartz.spi.TriggerFiredBundle;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;

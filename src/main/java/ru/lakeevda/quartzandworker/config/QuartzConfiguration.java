@@ -1,4 +1,4 @@
-package ru.lakeevda.quartztest.config;
+package ru.lakeevda.quartzandworker.config;
 
 import org.quartz.CronTrigger;
 import org.quartz.Job;

@@ -1,9 +1,9 @@
-package ru.lakeevda.quartztest.repository;
+package ru.lakeevda.quartzandworker.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import ru.lakeevda.quartztest.entity.WorkerTaskEntity;
+import ru.lakeevda.quartzandworker.entity.WorkerTaskEntity;
 
 import java.util.Collection;
 import java.util.List;
